@@ -16,7 +16,11 @@ public class LoginAndlogOut extends Base{
 	}
 
 
-	/*
-	 * @AfterSuite public void quit() { signOut(); driver.quit(); }
-	 */
+	
+	 @AfterSuite 
+	 public void quit() { 
+		 signOut(); 
+		 driver.quit();
+		 }
+	 
 }

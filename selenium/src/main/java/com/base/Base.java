@@ -1,14 +1,19 @@
 package com.base;
 
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveToOffsetAction;
 import org.openqa.selenium.support.PageFactory;
 
 import com.objectRepository.GmailLoginObject;
@@ -49,11 +54,32 @@ public class Base {
 		
 	}
     
-	public static void rightWindow()
+	public static void swtichTab()
 	{
-		Actions action= new Actions(driver);
-		action.keyDown(Keys.CONTROL).sendKeys(Keys.TAB).build().perform();
+		String parentWindow=driver.getWindowHandle();
+		Set<String> windows=driver.getWindowHandles();
+	    Iterator<String> ite=windows.iterator();
+	    while (ite.hasNext()) {
+			String child = ite.next();
+			if(!parentWindow.equalsIgnoreCase(child))
+			{
+				driver.switchTo().window(child);
+			}
+			
+		}
+	    
+	   
+	
 	}
+	
+	 public static void mouse(Object WebElement )
+	    {
+		 //  WebElement=element;
+	    	Actions builder=new Actions(driver);
+	    	//Action build=builder.moveToElement().bu
+	    	
+	    }
+	
 	
 	public static void javaScript(String Script) 
 	{
@@ -64,7 +90,6 @@ public class Base {
 		
 		
 	}
-		
 	}
 	
 	

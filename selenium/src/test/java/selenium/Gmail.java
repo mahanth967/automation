@@ -28,12 +28,14 @@ public class Gmail extends LoginAndlogOut{
 	}
 	
 	@Test(priority = 2)
-	public void login()
+	public void login() throws InterruptedException
 	{
 		GmailLoginObject sign=PageFactory.initElements(driver, GmailLoginObject.class);
-		rightWindow();
+		swtichTab();
+		System.out.println(driver.getWindowHandle());
+		System.out.println(driver.getTitle());
+	    Thread.sleep(5000);
 	
-		//javaScript("document.getElementById('identifierId').value='pmahanth967';");
 		sign.username.sendKeys("pmahanth967");
 		  sign.next.click(); 
 		  sign.password.sendKeys("tatadocomo"); 
