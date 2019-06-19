@@ -5,6 +5,7 @@
     <classes>
       <class name="selenium.Gmail">
         <methods>
+          <include name="quit"/>
           <include name="intail"/>
           <include name="login"/>
         </methods>

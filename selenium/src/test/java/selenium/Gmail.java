@@ -2,7 +2,14 @@ package selenium;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -32,14 +39,14 @@ public class Gmail extends LoginAndlogOut{
 	{
 		GmailLoginObject sign=PageFactory.initElements(driver, GmailLoginObject.class);
 		swtichTab();
-		System.out.println(driver.getWindowHandle());
-		System.out.println(driver.getTitle());
 	    Thread.sleep(5000);
 	
 		sign.username.sendKeys("pmahanth967");
 		  sign.next.click(); 
 		  sign.password.sendKeys("tatadocomo"); 
-		  sign.SignIn.click();
+		  WebDriverWait wait=new WebDriverWait(driver, 30);
+		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='passwordNext']"))).click();
+		  
 		 
 	}
 	

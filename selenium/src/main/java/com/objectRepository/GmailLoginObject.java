@@ -7,7 +7,7 @@ public class GmailLoginObject {
 	@FindBy(xpath = ".//input[@class='whsOnd zHQkBf']") public WebElement username;
 	@FindBy(xpath=".//*[@class='RveJvd snByac']")public WebElement next;
 	@FindBy(xpath = ".//*[@name='password']") public WebElement password;
-	@FindBy(xpath=".//*[@class='Vwe4Vb MbhUzd']")public WebElement SignIn;
+	public static String next2=".//*[@id='passwordNext']";
 	
 
 }
