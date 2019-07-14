@@ -7,6 +7,7 @@
         <methods>
           <include name="gmailSearch"/>
           <include name="intail"/>
+          <include name="login"/>
         </methods>
       </class> <!-- selenium.Gmail -->
     </classes>
