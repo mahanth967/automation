@@ -24,32 +24,34 @@ public class Gmail extends LoginAndlogOut {
 
 	@Test(priority = 1)
 	public void gmailSearch() throws Exception {
+		logger=reports.createTest("gmail search");
 		SearchGoogle search = PageFactory.initElements(driver, SearchGoogle.class);
-		String googlesearch=ExcelRead.getCellData("Gmail",1, 2);
-		System.out.println(googlesearch);
+		
+		String googlesearch=ExcelRead.getCellData("Gmail",1, 1);
 		search.searchGoogleTextBox.sendKeys(googlesearch);
 		  search.searchGoogleButton.click(); 
 		  search.resultLink.click();
 		  search.signIn.click();
+		  
 		 
 	}
 
 	@Test(priority = 2)
-	public void login() {
+	public void login() throws Exception {
+		logger=reports.createTest("login into Gmail");
 		GmailLoginObject sign = PageFactory.initElements(driver, GmailLoginObject.class);
 		System.out.println("login");
 		Base.swtichTab();
-		
 		Base.waitForElement(sign.username);
-		sign.username.sendKeys("pmahanth967");
+		String username=ExcelRead.getCellData("Gmail", 4, 1);
+		sign.username.sendKeys(username);
 		sign.next.click();
-		sign.password.sendKeys("tatadocomo");
+		String password=ExcelRead.getCellData("Gmail", 5,1);
+		sign.password.sendKeys(password);
 		Base.waitForElement(sign.passwordNext);
 
 	}
-
-	// input[@name='firstname' and contains(@class,'inputtext')]
-
+	
 	
 	/*
 	 * @Test(priority=3,dependsOnMethods = {"login"}) public void compose() {

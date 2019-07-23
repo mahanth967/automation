@@ -34,7 +34,7 @@ public class ExcelRead extends Base{
 		}
 		
 	}
-		public int getRows(String sheetname)
+		public static int getRows(String sheetname)
 		{
 			int index=workbook.getSheetIndex(sheetname);
 			if(index <=-1)
@@ -49,7 +49,7 @@ public class ExcelRead extends Base{
 			}
 		}
 		
-		public int getColumns(String sheetname)
+		public static int getColumns(String sheetname)
 		{
 			int index=workbook.getSheetIndex(sheetname);
 			if(index<=-1)
@@ -71,11 +71,8 @@ public class ExcelRead extends Base{
 			 
 		       try{
 		    	   DataFormatter formatter = new DataFormatter();
-					 sheet=workbook.getSheet(sheetName);
+				    sheet=workbook.getSheet(sheetName);
 		           String CellData=formatter.formatCellValue(sheet.getRow(RowNum).getCell(ColNum));
-		 
-		    
-		 
 		           return CellData;
 		 
 		           }catch (Exception e){

@@ -43,7 +43,12 @@
     <artifactId>poi-ooxml-schemas</artifactId>
     <version>4.0.0</version>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.0.0</version>
+</dependency>
  </dependencies>
  <build>
  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
@@ -59,6 +64,5 @@
         </configuration>
       </plugin>
 </plugins>
-
 </build>
 </project>

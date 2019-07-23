@@ -5,9 +5,11 @@
     <classes>
       <class name="selenium.Gmail">
         <methods>
-          <include name="gmailSearch"/>
           <include name="intail"/>
+          <include name="extent"/>
           <include name="login"/>
+          <include name="teardown"/>
+          <include name="endExtent"/>
         </methods>
       </class> <!-- selenium.Gmail -->
     </classes>
