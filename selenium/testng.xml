@@ -6,6 +6,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="selenium.Gmail"/>
+      <class name="selenium.ComposeMail"/>
       
     </classes>
   </test> <!-- Test -->
