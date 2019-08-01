@@ -31,6 +31,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.objectRepository.GmailLoginObject;
+import com.objectRepository.SearchGoogle;
 import com.utilities.ExcelRead;
 
 public class Base {
@@ -46,6 +47,7 @@ public class Base {
 	public ExtentTest logger;
 	public static ExcelRead excel=new ExcelRead();
 	public static String DateName=new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new Date());
+	
 	
 	
 	public static void  setExtent()
@@ -70,7 +72,7 @@ public class Base {
 			
     if(browser.equalsIgnoreCase("chrome"))
 		{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Mahanth\\eclipse-selenium\\selenium\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Mahanth\\git\\automation\\selenium\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();

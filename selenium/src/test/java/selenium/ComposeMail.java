@@ -55,7 +55,7 @@ public class ComposeMail extends LoginAndlogOut{
 	  String subject=ExcelRead.getCellData("Compose", 3 ,1);
 	  sign2.subject.sendKeys(subject); 
 	  String body=ExcelRead.getCellData("Compose", 6, 1); sign2.text.sendKeys(body);
-	  sign2.close.click();
+	 // sign2.close.click();
 	  
 	  
 	  }

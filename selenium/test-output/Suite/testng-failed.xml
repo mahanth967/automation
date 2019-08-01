@@ -3,6 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="selenium.Gmail">
+        <methods>
+          <include name="gmailSearch"/>
+          <include name="intail"/>
+          <include name="extent"/>
+          <include name="login"/>
+          <include name="teardown"/>
+          <include name="endExtent"/>
+        </methods>
+      </class> <!-- selenium.Gmail -->
       <class name="selenium.ComposeMail">
         <methods>
           <include name="intail"/>

@@ -14,8 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.Base;
 import com.base.LoginAndlogOut;
-import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
-import com.objectRepository.ComposeMailObject;
+
 import com.objectRepository.GmailLoginObject;
 import com.objectRepository.SearchGoogle;
 import com.utilities.ExcelRead;
@@ -49,8 +48,9 @@ public class Gmail extends LoginAndlogOut {
 		String password=ExcelRead.getCellData("Gmail", 5,1);
 		sign.password.sendKeys(password);
 		Base.waitForElement(sign.passwordNext);
+		
 
-	}
+	}	
 	
 	
 	

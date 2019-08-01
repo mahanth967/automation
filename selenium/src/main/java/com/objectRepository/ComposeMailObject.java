@@ -19,5 +19,5 @@ public class ComposeMailObject  {
 	@FindBy(xpath = "//*[@class='dC']")public WebElement send;
 	@FindBy(xpath="//*[@class='bAq']") public WebElement Message;
 	@FindBy(xpath="//*[contains(text(),'Message sent.')]") public WebElement MessageConfirmation;
-    @FindBy(xpath="//*[@id=':no']/td[2]/img[3]") public WebElement close;
+    @FindBy(xpath="//*[@id=':no']/td[2]") public WebElement close;
 }
